@@ -9,7 +9,7 @@ var app = express();
 
 app.use(morgan('tiny'));
 // for static bootstrap-lesson: static files
-app.use(express.static(path.join(__dirname, 'path/public/')))
+// app.use(express.static(path.join(__dirname, 'path/public/')))
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname,'views/index.html'));
 })
