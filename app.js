@@ -17,11 +17,18 @@ app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist'))
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
+// ============================================================
 app.get('/', (req, res) => {
-    res.render('index', { list: ['a', 'b'], title: 'Library' });
+  res.render(
+   'index', 
+    { 
+        nav: ['Books', 'Authors', 'Contact us', 'Find Here', 'Read Online' ], 
+        title: 'Library' 
+    }
+  );
 });
 
 
 app.listen(port, () => {
-    console.log(`Listening on port ${chalk.green('port')}`);
+  console.log(`Listening on port ${chalk.green('port')}`);
 });
