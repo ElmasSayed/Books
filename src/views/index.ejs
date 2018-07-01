@@ -26,13 +26,14 @@
       <a href="/" class="navbar-brand">Home</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
+    // EJS code for navbar in loop
       <ul class="nav navbar-nav">
         <%for(let i=0; i<nav.length; i++){%>
           <li>
              <a href="#"><%=nav[i]%></a>
           </li>
         <%}%>
-       
+    // EJS code end   
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
